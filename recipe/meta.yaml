@@ -1,4 +1,4 @@
-{% set version = '1.3.1' %}
+{% set version = "1.3.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/FCPS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/FCPS/FCPS_{{ version }}.tar.gz
-  sha256: 8bcd039633946eee5ed83d8665b8cf01e82eb7968a989161f0004691e1975f16
+  sha256: f96d46818ded51f54dfd7983781273772c24df8e065dc0c474e556fbfda75cfd
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -43,19 +43,12 @@ test:
 about:
   home: https://www.deepbionics.org/
   license: GPL-3.0-only
-  summary: 'Over sixty clustering algorithms are provided in this package with consistent input
-    and output, which enables the user to try out algorithms swiftly. Additionally,
-    26 statistical approaches for the estimation of the number of clusters as well as
-    the mirrored density plot (MD-plot) of clusterability are implemented. The packages
-    is published in Thrun, M.C., Stier Q.: "Fundamental Clustering Algorithms Suite"
-    (2021), SoftwareX, <DOI:10.1016/j.softx.2020.100642>. Moreover, the fundamental
-    clustering problems suite (FCPS) offers a variety of clustering challenges any algorithm
-    should handle when facing real world data, see Thrun, M.C., Ultsch A.: "Clustering
-    Benchmark Datasets Exploiting the Fundamental Clustering Problems" (2020), Data
-    in Brief, <DOI:10.1016/j.dib.2020.105501>.'
+  summary: 'Over sixty clustering algorithms are provided in this package with consistent input and output, which enables the user to try out algorithms swiftly. Additionally, 26 statistical approaches for the estimation of the number of clusters as well as the mirrored density plot (MD-plot) of clusterability are implemented.
+    The packages is published in Thrun, M.C., Stier Q.: "Fundamental Clustering Algorithms Suite" (2021), SoftwareX, <DOI:10.1016/j.softx.2020.100642>. Moreover, the fundamental clustering problems suite (FCPS) offers a variety of clustering challenges any algorithm should handle when facing real world data, see Thrun, M.C.,
+    Ultsch A.: "Clustering Benchmark Datasets Exploiting the Fundamental Clustering Problems" (2020), Data in Brief, <DOI:10.1016/j.dib.2020.105501>.'
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:

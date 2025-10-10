@@ -27,6 +27,7 @@ requirements:
     - r-datavisualizations
     - r-ggplot2
     - r-mclust
+    - tbb-devel
   run:
     - r-base
     - r-datavisualizations

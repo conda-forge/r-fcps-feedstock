@@ -12,7 +12,7 @@ source:
   sha256: d1e5e06700a81fe529f52ef1f65977d3c786f33df262f4f89238d2622dc7ba97
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -27,6 +27,7 @@ requirements:
     - r-datavisualizations
     - r-ggplot2
     - r-mclust
+    - tbb-devel
   run:
     - r-base
     - r-datavisualizations

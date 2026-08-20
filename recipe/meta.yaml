@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/FCPS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/FCPS/FCPS_{{ version }}.tar.gz
-  sha256: e91b8f44ae9c07511c1cf828e3909ecc616f5896f450a7b30e702bf050c54eed
+  sha256: 073534b45765d7ec80b0fbdb48c293fcf3f41a825ec3063588d70fbd2d878f93
 
 build:
   number: 0
